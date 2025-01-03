@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+      <head>
+        <title>Cats</title>
+        <link rel="stylesheet" href="style.css">
+
+      </head>
+      <body>
+           <header>
+            <h1>🐾 Welcome to Feline Lovers Hub 🐾</h1>
+            <nav>
+                <ul>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li> | </li>
+                    <li><a href="#facts">Cat Facts</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <!-- Main Content Section -->
+        <main>
+            <section id="gallery">
+                <h2>Cat Gallery</h2>
+                <div class="gallery">
+                    <img src="https://www.wikichat.fr/wp-content/uploads/sites/2/comment-soigner-une-plaie-dun-chat.jpg" alt="Cat 1">
+                    <img src="https://live.staticflickr.com/7364/13918207337_ba36e9c688.jpg" alt="Cat 2">
+              
+                </div>
+            </section>
+    
+            <section id="facts">
+                <h2>Random Cat Fact</h2>
+                <p id="cat-fact">CLICK THE BUTTON BELOW TO LEARN A FUN CAT FACT!</p>
+                <button id="fact-btn">Get Cat Fact</button>
+            </section>
+        </main>
+    
+      
+    
+        <script src="script.js"></script>
+                 
+
+     <p>Cats are a domesticated species of small carnivorous mammals.It is the only domesticated 
+     species in the <em>Felidae</em> family and is commonly referred to as the <strong>domestic
+     cat</strong> or <strong>house cat</strong> to distinguish it from the wild members of the 
+     family.Cats are commonly kept as house pets but can also be farm cats or feral cats;the feral 
+     cats have no contact with humans and ranges freely.Domestic cats are valued by humans for
+     companionship and their ability to kill rodents.</p>
+     <p> 
+       <h3><strong> Biological Facts </strong></h3>
+        <p>
+        <b><em>Scientific Name:</em></b> Felis catus <br>
+        <b><em>Lifespan:</em></b> 12–18 years on average (longer for indoor cats)<br>
+        <b><em>Diet:</em></b> Obligate carnivores (require a diet high in animal protein)<br>
+        <b><em>Senses:</em></b> Excellent night vision, acute hearing, and a strong sense of smell.<br>
+        <b><em>Physical Traits:</em></b> Retractable claws, sharp teeth, and flexible bodies 
+        </p>
+      </p>
+<br>
+        <p> 
+          <h3><strong>Cat Breeds</strong></h3>
+          <p>
+          <b><em>Maine Coon:</em></b> Large and fluffy with a friendly nature.<br>
+          <b><em>Siamese:</em></b> Sleek and vocal.<br>
+          <b><em>Persian:</em></b> Long-haired and calm.<br>
+          <b><em>Bengal:</em></b> Wild appearance with spots.
+          </p>
+        </p>
+<br>
+        <p> 
+        <h3><strong>Behaviour of Cats</strong></h3>
+        <b><em>Independent Nature:</em></b> Cats are known for their independence but can form strong bonds with their owners.<br>
+        <b><em>Territorial:</em></b> They are territorial animals and may mark their territory with scent glands or scratching.<br>
+        <b><em>Communication:</em></b> Cats communicate using meows, purrs, hisses, body language, and tail movements.<br>
+        <b><em>Playful Hunters:</em></b> Even domesticated cats exhibit hunting behavior, like pouncing and stalking.
+        </p>
+
+
+      <footer>
+        <p>&copy; 2024 Feline Lovers Hub. All Rights Reserved.</p>
+    </footer>
+
+      <style> 
+       
+       
+    
+    
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            text-align: justify;
+        }
+        
+        /* Header */
+        header {
+            background: #7edf9b;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        header h1 {
+            margin: 0;
+        }
+        
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        /* Main Content */
+        main {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        /* Gallery */
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 20px 0;
+        }
+        
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 5px;
+            border: 2px solid #ddd;
+        }
+        
+        /* Cat Fact Section */
+        #facts {
+            margin-top: 30px;
+            color: rgb(88, 172, 250);
+             font-family: cursive;
+          }
+        
+        #fact-btn {
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 5px;
+        }
+        
+        #fact-btn:hover {
+            background-color: #388e3c;
+        }
+        
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: #333;
+            color: white;
+            margin-top: 20px;
+        }
+        
+      </style>
+
+      <script>
+
+      // Array of cat facts
+      const catFacts = [
+          "Cats sleep for 70% of their lives.",
+          "A group of cats is called a clowder.",
+          "Cats can jump up to six times their body length.",
+          "The world's largest cat measured 48.5 inches long.",
+          "A cat's nose is as unique as a human fingerprint.",
+          "A cat's purring frequency (around 25–150 Hz) is believed to have healing properties."
+      ];
+      
+      // Get elements from the DOM
+      const factBtn = document.getElementById('fact-btn');
+      const factText = document.getElementById('cat-fact');
+      
+      // Event Listener for Button Click
+      factBtn.addEventListener('click', () => {
+          const randomIndex = Math.floor(Math.random() * catFacts.length);
+          factText.textContent = catFacts[randomIndex];
+      });
+      </script>
+        
+    
+</body>
+</html>
+                
